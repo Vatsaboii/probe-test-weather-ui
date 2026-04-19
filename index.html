@@ -21,6 +21,44 @@
           <span>Search city</span>
           <input id="search-input" type="search" placeholder="Try Bengaluru or Tokyo" />
         </label>
+
+        <label class="filter">
+          <span>Condition</span>
+          <select id="condition-filter">
+            <option value="all">All conditions</option>
+            <option value="sunny">Sunny</option>
+            <option value="humid">Humid</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rain">Rain</option>
+          </select>
+        </label>
+
+        <fieldset class="unit-toggle">
+          <legend>Temperature</legend>
+          <label>
+            <input type="radio" name="temperature-unit" value="c" checked />
+            <span>Celsius</span>
+          </label>
+          <label>
+            <input type="radio" name="temperature-unit" value="f" />
+            <span>Fahrenheit</span>
+          </label>
+        </fieldset>
+      </section>
+
+      <section class="summary-bar" aria-live="polite">
+        <div class="summary-card">
+          <span class="summary-label">Visible cities</span>
+          <strong id="visible-count">0</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">Warmest city</span>
+          <strong id="warmest-city">-</strong>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">Last refreshed</span>
+          <strong id="last-updated">-</strong>
+        </div>
       </section>
 
       <section id="weather-grid" class="weather-grid" aria-live="polite"></section>
@@ -28,4 +66,4 @@
 
     <script type="module" src="./app.js"></script>
   </body>
-  </html>
+</html>
