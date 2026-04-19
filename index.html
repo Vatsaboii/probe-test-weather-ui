@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skyline Weather</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Weather Watch</p>
+        <h1>Skyline Weather</h1>
+        <p class="hero-copy">
+          A compact city forecast board for quick daily planning.
+        </p>
+      </section>
+
+      <section class="toolbar">
+        <label class="search">
+          <span>Search city</span>
+          <input id="search-input" type="search" placeholder="Try Bengaluru or Tokyo" />
+        </label>
+      </section>
+
+      <section id="weather-grid" class="weather-grid" aria-live="polite"></section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+  </html>
