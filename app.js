@@ -8,6 +8,7 @@ const forecasts = [
 const searchInput = document.querySelector("#search-input");
 const conditionFilter = document.querySelector("#condition-filter");
 const unitInputs = document.querySelectorAll('input[name="temperature-unit"]');
+const resetFiltersButton = document.querySelector("#reset-filters");
 const weatherGrid = document.querySelector("#weather-grid");
 const visibleCount = document.querySelector("#visible-count");
 const warmestCity = document.querySelector("#warmest-city");
@@ -30,6 +31,18 @@ unitInputs.forEach((input) => {
     selectedUnit = event.target.value;
     renderWeatherBoard();
   });
+});
+
+resetFiltersButton.addEventListener("click", () => {
+  searchInput.value = "";
+  conditionFilter.value = "all";
+  selectedUnit = "c";
+
+  unitInputs.forEach((input) => {
+    input.checked = input.value === "c";
+  });
+
+  renderWeatherBoard();
 });
 
 function renderWeatherBoard() {
